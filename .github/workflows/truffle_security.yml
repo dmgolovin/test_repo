@@ -9,10 +9,8 @@ jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
-      - name: Branch name 3
-        run: echo running on branch ${GITHUB_HEAD_REF}
       - name: Checkout code
-        uses: actions/checkout@${GITHUB_HEAD_REF}
+        uses: ${{ format('actions/checkout@{0}', ${GITHUB_HEAD_REF}) }}
         with:
           fetch-depth: 0
       - name: TruffleHog OSS

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Branch name 3
-        run: echo running on branch ${GITHUB_REF_NAME}
+        run: echo running on branch ${GITHUB_HEAD_REF}
       - name: Checkout code
         uses: actions/checkout@v3
         with:

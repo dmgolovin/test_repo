@@ -16,7 +16,7 @@ jobs:
       - name: Branch name 3
         run: echo running on branch ${GITHUB_REF_NAME}
       - name: Checkout code
-        uses: actions/checkout@${GITHUB_REF_NAME}
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: TruffleHog OSS

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@${{GITHUB_REF#refs/heads/}}
+        uses: actions/checkout@${{ github.head_ref }}
         with:
           fetch-depth: 0
       - name: TruffleHog OSS
